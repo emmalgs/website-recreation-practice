@@ -1,8 +1,10 @@
 function render() {
     const h1 = document.querySelector("h1");
+    h1.remove();
+    
     const p = document.createElement("p");
     p.append("The HTML of this webpage was created with JavaScript.");
-    h1.after(p);
+    document.querySelector("body").append(p);
 
     const image = document.createElement("img");
     image.setAttribute("src", "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/202984001/900");
